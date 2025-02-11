@@ -1,15 +1,15 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import Header from '../components/Header'
+import React from "react";
+import Navbar from "../components/Navbar";
+import Header from "../components/Header";
+import AboutInfo from "../components/AboutInfo";
 
 const About = () => {
   return (
     <div>
-        <Header />
-        <Navbar />
-        <h1>About</h1>
+      <AboutInfo />
+      <Navbar />
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
