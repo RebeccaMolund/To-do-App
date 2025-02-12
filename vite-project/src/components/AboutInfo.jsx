@@ -9,16 +9,16 @@ const AboutInfo = () => {
       </p>
       <ul className="infoList">
         <h3>Features:</h3>
-        <li>
+        <li className="AboutListItem">
           <h4>Add Tasks:</h4>
         </li>
-        <li>
+        <li className="AboutListItem">
           <h4>Delete Tasks:</h4>
         </li>
-        <li>
+        <li className="AboutListItem">
           <h4>Change list order:</h4>
         </li>
-        <li>
+        <li className="AboutListItem">
           <h4>Check task:</h4>
         </li>
       </ul>
