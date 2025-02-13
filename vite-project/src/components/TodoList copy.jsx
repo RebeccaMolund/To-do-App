@@ -79,25 +79,21 @@ const TodoList = () => {
           Add
         </button>
       </div>
-
       <h2>Uncompleted Tasks</h2>
       <ol>
         {tasks.map((task, index) => (
           <div key={index}>
-            {!task.completed && (
-              <Todo
-                index={index}
-                task={task}
-                toggleTaskCompletion={toggleTaskCompletion}
-                deleteTask={deleteTask}
-                moveTaskDown={moveTaskDown}
-                moveTaskUp={moveTaskUp}
-              />
-            )}
+            <Todo
+              index={index}
+              task={task}
+              toggleTaskCompletion={toggleTaskCompletion}
+              deleteTask={deleteTask}
+              moveTaskDown={moveTaskDown}
+              moveTaskUp={moveTaskUp}
+            />
           </div>
         ))}
       </ol>
-
       <h2>All completed tasks</h2>
       <ol>
         {tasks.map((task, index) => (
