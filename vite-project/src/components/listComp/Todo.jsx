@@ -16,13 +16,13 @@ const Todo = ({
       </span>
       <div className="LiButtons">
         <button className="delete-button" onClick={() => deleteTask(index)}>
-          ❌
+          <div className="icon">❌</div>
         </button>
         <button className="move-button" onClick={() => moveTaskUp(index)}>
-          👆
+          <div className="icon">👆</div>
         </button>
         <button className="move-button" onClick={() => moveTaskDown(index)}>
-          👇
+          <div className="icon">👇</div>
         </button>
       </div>
     </li>

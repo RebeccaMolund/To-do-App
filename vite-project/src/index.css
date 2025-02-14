@@ -1,32 +1,68 @@
-* {
+*,
+html,
+.app {
   box-sizing: border-box;
+  padding: 2px;
+  margin: 0;
 }
 
 body {
   display: flex;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding: 0;
-  background-color: #0f1518;
-  color: rgb(138, 138, 201);
+  color: rgb(169, 169, 255);
   justify-content: center;
+  background-color: #14181c;
+}
+
+.mainHeader {
+  padding: 0 0 0 2rem;
+  color: rgb(225, 193, 255);
+  text-transform: uppercase;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 4rem;
+  font-family: "Fugaz One", serif;
+  font-weight: bolder;
+  font-style: normal;
+  background: -webkit-linear-gradient(#ff0ec7, #2bedff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 header {
   display: flex;
-  justify-content: center;
-  justify-items: space-around;
+  align-items: center;
+  flex-direction: column;
 }
 
 .a {
   padding: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: rgb(79, 190, 184);
   font-family: Verdana, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
 }
 
-.a:hover {
+a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after {
+  width: 100%;
+  left: 0;
   color: rgb(10, 96, 92);
-  transition: color 0.5s ease;
 }
 
 .aboutInfo {
@@ -34,8 +70,10 @@ header {
   font-family: Verdana, sans-serif;
   text-align: center;
   margin-top: 1rem;
-  justify-content: space-between;
+  gap: 1rem;
   flex-direction: column;
+  max-width: 300px;
+  align-items: center;
 }
 
 .to-do-list {
@@ -47,16 +85,13 @@ header {
   flex-direction: column;
 }
 
-h1 {
-  font-size: 3rem;
-}
-
 button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.5s ease;
+  box-shadow: 3px 2px 8px 0px#22172879;
 }
 
 .add-button {
@@ -64,30 +99,48 @@ button {
   font-size: 1rem;
   font-weight: bold;
   color: white;
+  border-radius: 0px 5px 5px 0px;
 }
 .add-button:hover {
   background-color: rgb(0, 45, 43);
 }
 
 .delete-button {
-  background-color: rgb(255, 221, 221);
+  background-color: rgb(177, 80, 80);
+  border: 1px solid rgb(90, 39, 39);
+  padding: 8px 8px;
+  font-size: 1rem;
+  margin-left: 10px;
 }
 .delete-button:hover {
-  background-color: rgb(255, 158, 158);
+  background-color: rgb(201, 121, 121);
 }
+
+.icon {
+  background: rgb(239, 222, 255);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .move-button {
-  background-color: rgb(40, 109, 188);
+  background-color: rgb(47, 111, 184);
+  border: 1px solid rgb(42, 86, 137);
+  padding: 8px 8px;
+  font-size: 1rem;
+  margin-left: 10px;
 }
 .move-button:hover {
   background-color: rgb(16, 63, 117);
 }
+
 input[type="text"] {
   font-size: 1.2rem;
   padding: 6px;
+  margin-top: 2rem;
   border: 2px solid rgba(255, 255, 255, 0.493);
-  background-color: #0f1518;
-  border-radius: 5px;
-  color: rgb(144, 144, 177);
+  background-color: #142127;
+  border-radius: 5px 0px 0px 5px;
+  color: rgb(204, 238, 245);
 }
 
 ol {
@@ -101,7 +154,7 @@ ol {
   font-size: 1rem;
   font-weight: bold;
   padding: 15px;
-  background-color: rgba(176, 171, 215, 0.788);
+  background-color: #a5d2dcdd;
   margin-bottom: 10px;
   border-radius: 5px;
   display: flex;
@@ -109,14 +162,23 @@ ol {
   justify-content: space-between;
 }
 
+.aboutListItem {
+  margin-bottom: 1rem;
+}
+
 span {
   display: flex;
   flex-wrap: wrap;
-  max-width: 150px;
+  max-width: 136px;
+  color: #112832;
 }
 
 ul {
   padding: 0;
+}
+
+li {
+  list-style-type: none;
 }
 
 .text {
@@ -129,9 +191,59 @@ ul {
   color: rgb(50, 50, 50);
 }
 
-.delete-button,
-.move-button {
-  padding: 8px 8px;
-  font-size: 1rem;
-  margin-left: 10px;
+h2 {
+  margin: 2rem 1rem 1rem 1rem;
+  text-transform: uppercase;
+}
+
+h4 {
+  color: rgba(255, 255, 255, 0.812);
+}
+
+@media screen and (min-width: 1024px) {
+  span {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 350px;
+  }
+  .to-do-list {
+    margin-top: 2rem;
+  }
+  input[type="text"] {
+    margin-bottom: 2rem;
+  }
+  .mainHeader {
+    margin-top: 2rem;
+    font-size: 6rem;
+  }
+  header {
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+  }
+  .a {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+  .mainHeader {
+    font-size: 4rem;
+  }
+  .add-button {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  input[type="text"] {
+    font-size: 1.5rem;
+    padding: 8px;
+  }
+  .aboutInfo {
+    display: flex;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    margin-top: 1rem;
+    gap: 2rem;
+    flex-direction: column;
+    max-width: 600px;
+    align-items: center;
+  }
 }

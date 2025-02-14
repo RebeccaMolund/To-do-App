@@ -67,7 +67,7 @@ const TodoList = () => {
 
   return (
     <div className="to-do-list">
-      <h1>To-do List</h1>
+      <h1 className="mainHeader">To-do✔️</h1>
       <div>
         <input
           type="text"
@@ -98,7 +98,7 @@ const TodoList = () => {
         ))}
       </ol>
 
-      <h2>All completed tasks</h2>
+      <h2>Completed tasks</h2>
       <ol>
         {tasks.map((task, index) => (
           <div key={index}>

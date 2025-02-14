@@ -5,7 +5,7 @@ import TodoList from "../components/TodoList";
 
 const Home = () => {
   return (
-    <div>
+    <div className="homeContent">
       <Header />
       <TodoList />
     </div>
