@@ -9,7 +9,7 @@ html,
 body {
   display: flex;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(169, 169, 255);
+  color: rgba(255, 255, 255, 0.777);
   justify-content: center;
   background-color: #14181c;
 }
@@ -23,7 +23,7 @@ body {
   font-family: "Fugaz One", serif;
   font-weight: bolder;
   font-style: normal;
-  background: -webkit-linear-gradient(#ff0ec7, #2bedff);
+  background: -webkit-linear-gradient(#ff9d00, #00eaff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -95,14 +95,14 @@ button {
 }
 
 .add-button {
-  background-color: rgb(10, 96, 92);
+  background-color: rgb(22, 133, 127);
   font-size: 1rem;
   font-weight: bold;
   color: white;
   border-radius: 0px 5px 5px 0px;
 }
 .add-button:hover {
-  background-color: rgb(0, 45, 43);
+  background-color: rgb(9, 82, 78);
 }
 
 .delete-button {
@@ -117,27 +117,27 @@ button {
 }
 
 .icon {
-  background: rgb(239, 222, 255);
+  background: white;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .move-button {
-  background-color: rgb(47, 111, 184);
-  border: 1px solid rgb(42, 86, 137);
+  background-color: rgb(26, 120, 146);
+  border: 1px solid rgb(19, 75, 93);
   padding: 8px 8px;
   font-size: 1rem;
   margin-left: 10px;
 }
 .move-button:hover {
-  background-color: rgb(16, 63, 117);
+  background-color: rgb(16, 92, 117);
 }
 
 input[type="text"] {
   font-size: 1.2rem;
   padding: 6px;
   margin-top: 2rem;
-  border: 2px solid rgba(255, 255, 255, 0.493);
+  border: 2px solid rgb(22, 133, 127);
   background-color: #142127;
   border-radius: 5px 0px 0px 5px;
   color: rgb(204, 238, 245);
@@ -154,7 +154,7 @@ ol {
   font-size: 1rem;
   font-weight: bold;
   padding: 15px;
-  background-color: #a5d2dcdd;
+  background-color: rgba(175, 254, 250, 0.742);
   margin-bottom: 10px;
   border-radius: 5px;
   display: flex;
@@ -194,10 +194,11 @@ li {
 h2 {
   margin: 2rem 1rem 1rem 1rem;
   text-transform: uppercase;
+  color: #ffdf6dea;
 }
 
 h4 {
-  color: rgba(255, 255, 255, 0.812);
+  color: rgb(79, 190, 184);
 }
 
 @media screen and (min-width: 1024px) {

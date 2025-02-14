@@ -33,8 +33,8 @@ const AboutInfo = () => {
           <h4>Check task:</h4>
           <p>
             To check a task you just need to click the text of the task. The
-            task will then be removed from the "Uncompleted tasks"-list and
-            added to the "Completed tasks"-list.
+            task will then be removed from the Uncompleted tasks-list and added
+            to the Completed tasks-list.
           </p>
         </li>
       </ul>
