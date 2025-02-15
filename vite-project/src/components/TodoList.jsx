@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Todo from "./listComp/Todo";
+import Input from "./listComp/Input";
 
 const TodoList = () => {
   const [tasks, setTasks] = useState([]);
@@ -41,7 +42,7 @@ const TodoList = () => {
         updatedTasks[index - 1],
         updatedTasks[index],
       ];
-      setTasks(updatedTasks); //om jag har tid, ändra till splice
+      setTasks(updatedTasks);
     }
   };
 
@@ -67,18 +68,7 @@ const TodoList = () => {
 
   return (
     <div className="to-do-list">
-      <h1 className="mainHeader">To-do✔️</h1>
-      <div>
-        <input
-          type="text"
-          placeholder="Enter a task..."
-          value={newTask}
-          onChange={handleInputChange}
-        />
-        <button className="add-button" onClick={addTask}>
-          Add
-        </button>
-      </div>
+      <Input />
 
       <h2>Uncompleted Tasks</h2>
       <ol>
