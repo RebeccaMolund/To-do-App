@@ -68,7 +68,11 @@ const TodoList = () => {
 
   return (
     <div className="to-do-list">
-      <Input />
+      <Input
+        newTask={newTask}
+        handleInputChange={handleInputChange}
+        addTask={addTask}
+      />
 
       <h2>Uncompleted Tasks</h2>
       <ol>
