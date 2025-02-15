@@ -30,11 +30,11 @@ const AboutInfo = () => {
           </p>
         </li>
         <li className="aboutListItem">
-          <h4>Check task:</h4>
+          <h4>Complete a task:</h4>
           <p>
-            To check a task you just need to click the text of the task. The
-            task will then be removed from the Uncompleted tasks-list and added
-            to the Completed tasks-list.
+            To complete a task you just need to click the text of the task. The
+            task will then be removed from the Tasks-list and added to the
+            Completed Tasks-list.
           </p>
         </li>
       </ul>

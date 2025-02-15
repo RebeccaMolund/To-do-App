@@ -8,28 +8,28 @@ html,
 
 body {
   display: flex;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgba(255, 255, 255, 0.777);
   justify-content: center;
-  background-color: #14181c;
+  background: -webkit-linear-gradient(#04002c, #3d035a);
+  background-attachment: fixed;
 }
 
-header {
+nav {
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  justify-content: center;
 }
 
 .mainHeader {
   padding: 0 0 0 2rem;
-  color: rgb(225, 193, 255);
   text-transform: uppercase;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 4rem;
-  font-family: "Fugaz One", serif;
+  font-size: 3.5rem;
+  font-family: "Shrikhand", serif;
   font-weight: bolder;
   font-style: normal;
-  background: -webkit-linear-gradient(#ff9d00, #00eaff);
+  background-color: #d000ff;
+  background-size: 100%;
+  background-repeat: repeat;
+  background: -webkit-linear-gradient(#baafff, #d000ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -48,11 +48,11 @@ header {
 h2 {
   margin: 2rem 1rem 1rem 1rem;
   text-transform: uppercase;
-  color: #ffdf6dea;
+  color: #f5c4ffd6;
 }
 
 h4 {
-  color: rgb(79, 190, 184);
+  color: rgba(122, 144, 231, 0.975);
 }
 
 .to-do-list {
@@ -69,21 +69,25 @@ h4 {
 }
 
 .taskItems {
+  transition: all 0.4s;
   font-size: 1rem;
   font-weight: bold;
   padding: 15px;
-  background-color: rgba(175, 254, 250, 0.742);
+  background-color: rgba(118, 136, 200, 0.303);
   margin-bottom: 10px;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+.taskItems:hover {
+  transform: scale(1.1);
+}
 
 .a {
   padding: 1rem;
   font-size: 1.2rem;
-  color: rgb(79, 190, 184);
+  color: rgba(141, 163, 250, 0.926);
   font-family: Verdana, sans-serif;
   font-weight: bold;
   text-decoration: none;
@@ -91,6 +95,10 @@ h4 {
   display: inline-block;
   padding: 15px 20px;
   position: relative;
+}
+
+a:hover {
+  color: rgba(122, 144, 231, 0.782);
 }
 
 a:after {
@@ -121,25 +129,25 @@ button {
 }
 
 .add-button {
-  background-color: rgb(22, 133, 127);
+  background-color: rgb(39, 59, 141);
   font-size: 1rem;
   font-weight: bold;
   color: white;
   border-radius: 0px 5px 5px 0px;
 }
 .add-button:hover {
-  background-color: rgb(9, 82, 78);
+  background-color: rgb(14, 27, 83);
 }
 
 .delete-button {
-  background-color: rgb(177, 80, 80);
-  border: 1px solid rgb(90, 39, 39);
+  background-color: rgb(144, 53, 100);
+  border: 1px solid rgb(97, 27, 63);
   padding: 8px 8px;
   font-size: 1rem;
   margin-left: 10px;
 }
 .delete-button:hover {
-  background-color: rgb(128, 49, 49);
+  background-color: rgb(97, 27, 63);
 }
 
 .icon {
@@ -148,25 +156,27 @@ button {
   -webkit-text-fill-color: transparent;
 }
 
-.move-button {
-  background-color: rgb(26, 120, 146);
-  border: 1px solid rgb(19, 75, 93);
+.move-button-up,
+.move-button-down {
+  background-color: rgb(65, 89, 186);
+  border: 1px solid rgb(39, 59, 141);
   padding: 8px 8px;
   font-size: 1rem;
   margin-left: 10px;
 }
-.move-button:hover {
-  background-color: rgb(16, 92, 117);
+.move-button-up:hover,
+.move-button-down:hover {
+  background-color: rgb(18, 34, 120);
 }
 
 input[type="text"] {
   font-size: 1.2rem;
   padding: 6px;
   margin-top: 2rem;
-  border: 2px solid rgb(22, 133, 127);
-  background-color: #142127;
+  border: 2px solid rgb(51, 74, 164);
+  background-color: #00000048;
   border-radius: 5px 0px 0px 5px;
-  color: rgb(204, 238, 245);
+  color: rgb(255, 255, 255);
 }
 
 ol {
@@ -180,7 +190,7 @@ span {
   display: flex;
   flex-wrap: wrap;
   max-width: 136px;
-  color: #112832;
+  color: #ffffff;
 }
 
 ul {
@@ -194,11 +204,12 @@ li {
 .text {
   display: flex;
   flex-wrap: wrap;
-  color: #0f1518;
+  color: #ffffff;
 }
+
 .text.completed {
   text-decoration: line-through;
-  color: rgb(50, 50, 50);
+  color: rgba(255, 255, 255, 0.633);
 }
 
 @media screen and (min-width: 1024px) {
@@ -215,6 +226,7 @@ li {
   }
   .mainHeader {
     margin-top: 2rem;
+    margin-bottom: 2rem;
     font-size: 6rem;
   }
   header {
@@ -238,13 +250,13 @@ li {
     padding: 8px;
   }
   .aboutInfo {
-    display: flex;
-    font-family: Verdana, sans-serif;
-    text-align: center;
-    margin-top: 1rem;
-    gap: 2rem;
-    flex-direction: column;
     max-width: 600px;
-    align-items: center;
+  }
+  .text {
+    font-size: 1.5rem;
+    font-weight: 100;
+    display: flex;
+    flex-wrap: wrap;
+    color: #ffffff;
   }
 }

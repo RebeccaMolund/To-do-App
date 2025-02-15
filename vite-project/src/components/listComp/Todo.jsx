@@ -18,10 +18,13 @@ const Todo = ({
         <button className="delete-button" onClick={() => deleteTask(index)}>
           <div className="icon">❌</div>
         </button>
-        <button className="move-button" onClick={() => moveTaskUp(index)}>
+        <button className="move-button-up" onClick={() => moveTaskUp(index)}>
           <div className="icon">👆</div>
         </button>
-        <button className="move-button" onClick={() => moveTaskDown(index)}>
+        <button
+          className="move-button-down"
+          onClick={() => moveTaskDown(index)}
+        >
           <div className="icon">👇</div>
         </button>
       </div>

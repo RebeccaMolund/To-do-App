@@ -68,13 +68,14 @@ const TodoList = () => {
 
   return (
     <div className="to-do-list">
+      {<h1 className="mainHeader">To-do✔️</h1>}
       <Input
         newTask={newTask}
         handleInputChange={handleInputChange}
         addTask={addTask}
       />
 
-      <h2>Uncompleted Tasks</h2>
+      <h2>Tasks</h2>
       <ol>
         {tasks.map((task, index) => (
           <div key={index}>
